@@ -11,7 +11,7 @@ var Index = {
     },
     generateReport: function(start, stop) {
         $.get(
-            "/api/report",
+            "/api/report/",
             {
                 start,
                 stop
@@ -19,7 +19,9 @@ var Index = {
             function(response) {
                 Index.populateChart(response);
             }
-        );
+        ).fail(function(err) {
+            alert(err.responseText);
+        });
     },
     populateChart: function(data) {
         Highcharts.chart("chart", {

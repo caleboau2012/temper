@@ -17,11 +17,11 @@
                 <form name="generate" class="form-inline" role="form">
                     <div class="form-group">
                         <label class="sr-only" for="start">Start:</label>
-                        <input required type="date" class="form-control" name="start" id="start" placeholder="Start Date">
+                        <input required type="date" class="form-control" name="start" id="start" placeholder="Start Date" value="2016-07-06">
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="stop">Stop:</label>
-                        <input required type="date" class="form-control" name="stop" id="stop" placeholder="Stop Date">
+                        <input required type="date" class="form-control" name="stop" id="stop" placeholder="Stop Date" value="2016-09-06">
                     </div>
                     <button type="submit" class="btn btn-primary">Generate Report</button>
                 </form>
