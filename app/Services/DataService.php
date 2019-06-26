@@ -15,6 +15,12 @@ class DataService
         $this->data = $data;
     }
 
+    /**
+     * This method accepts the request from the controller and processes it
+     * to get the appropriate result
+     *
+     * @return array
+     */
     public function fetch(Request $request)
     {
         $start = $request->input('start');
@@ -46,6 +52,12 @@ class DataService
         return $response;
     }
 
+    /**
+     * This method accepts a collection of data pointts
+     * and prepares the needed graph data.
+     *
+     * @return array
+     */
     public function prepare($data)
     {
         $response = [
@@ -89,6 +101,11 @@ class DataService
         return array_values($response);
     }
 
+    /**
+     * Function to get weekly cohorts from given start and stop dates
+     *
+     * @return array
+     */
     public function getWeeklyCohorts($start, $stop)
     {
         $current = new \DateTime($start);
