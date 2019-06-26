@@ -2,13 +2,27 @@
 
 ## Pre-requisites
 
-- composer (https://getcomposer.org/)
-- PHP >= 7.1.3
+-   composer (https://getcomposer.org/)
+-   PHP >= 7.1.3
 
 ## Set up instructions
 
+### unix users (Linux or Macos)
+
 After cloning this application, run the start script (this command: `./start.sh`) in a terminal.
 This script will install all dependencies using composer, run the migration and then start your php server
+
+### non unix users (Windows)
+
+If you cannot use use bash for windows then after cloning this application and installing the dependencies, run the folllowing commands in your regular command prompt
+
+-   `composer install`
+
+-   `touch>database/database.sqlite`
+
+-   `php artisan migrate --seed`
+
+-   `php artisan serve`
 
 ## Demo
 
@@ -20,7 +34,8 @@ You should see this graph
 ## Testing
 
 To test this, run `vendor/bin/phpunit` in the root folder in a terminal.
-If all goes well, you should see 
+If all goes well, you should see
+
 ```
 OK (8 tests, 9 assertions)
 ```
